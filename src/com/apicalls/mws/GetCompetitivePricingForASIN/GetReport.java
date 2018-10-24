@@ -1,7 +1,13 @@
 package com.apicalls.mws.GetCompetitivePricingForASIN;
 
-import com.amazonservices.mws.products.*;
-import com.amazonservices.mws.products.model.*;
+import com.amazonservices.mws.products.MarketplaceWebServiceProducts;
+import com.amazonservices.mws.products.MarketplaceWebServiceProductsClient;
+import com.amazonservices.mws.products.MarketplaceWebServiceProductsConfig;
+import com.amazonservices.mws.products.MarketplaceWebServiceProductsException;
+import com.amazonservices.mws.products.model.GetCompetitivePricingForASINResponse;
+import com.amazonservices.mws.products.model.ResponseHeaderMetadata;
+import com.amazonservices.mws.products.model.GetCompetitivePricingForASINRequest;
+import com.amazonservices.mws.products.model.ASINListType;
 
 import java.io.File;
 import java.io.FileWriter;

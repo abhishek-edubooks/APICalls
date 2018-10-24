@@ -1,14 +1,22 @@
 package com.apicalls.util;
 
-import com.amazonservices.mws.products.model.GetCompetitivePricingForASINResponse;
+//import com.amazonservices.mws.products.model.GetCompetitivePricingForASINResponse;
+
+import com.apicalls.mws.model.GetCompetitivePricingForASINResponse;
+import com.apicalls.mws.model.GetCompetitivePricingForASINResult;
+import com.apicalls.mws.model.Product;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Unmarshaller;
 import java.io.*;
 //import java.sql.Statement;
+import java.sql.Connection;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.logging.Logger;
+
+import static com.apicalls.mws.GetCompetitivePricingForASIN.xmlToSql.setGetCompetitivePricingForASIN;
+import static com.apicalls.util.DBOperations.getDataEngineDBConnection;
 
 //import static com.apicalls.util.DBOperations.readTracker;
 
@@ -49,7 +57,7 @@ public class CommonMethod {
 	}
 
     public static void main(String[] args) {
-//        Map<String, String> configuration = ReadConfigFile();
+        Map<String, String> configuration = ReadConfigFile();
 //
 //        String report = "GetLowestOfferListingsForASIN";
 //
@@ -58,15 +66,29 @@ public class CommonMethod {
 //        String logfile = filePath + "/logFiles/" + dt + "_" + "GetLowestOfferListingsForASIN.log";
 //        Logger logger = LoggerMain.getLogger(logfile, false);
 
-        try {
-            JAXBContext context = JAXBContext.newInstance(GetCompetitivePricingForASINResponse.class);
-            Unmarshaller um = context.createUnmarshaller();
-            GetCompetitivePricingForASINResponse res = (GetCompetitivePricingForASINResponse) um.unmarshal(new FileReader("report_files/GetCompetitivePricingForASIN_0.xml"));
-            System.out.println(res);
+//        try {
+//            JAXBContext context = JAXBContext.newInstance(GetCompetitivePricingForASINResponse.class);
+//            Unmarshaller um = context.createUnmarshaller();
+//            GetCompetitivePricingForASINResponse res = (GetCompetitivePricingForASINResponse) um.unmarshal(new FileReader("report_files/GetCompetitivePricingForASIN_0.xml"));
+//            for (GetCompetitivePricingForASINResult getCompetitivePricingForASINResult: res.getGetCompetitivePricingForASINResult()) {
+//                System.out.println(getCompetitivePricingForASINResult.getProduct().getIdentifiers().getMarketplaceASIN().getASIN());
+//            }
+//
+//        } catch (Exception e){
+//            e.printStackTrace();
+//        }
 
-        } catch (Exception e){
-            e.printStackTrace();
-        }
+//        SimpleDateFormat sdf=new SimpleDateFormat("YYYYMMdd");
+//        String createDate = sdf.format(new Date());
+//        System.out.println(createDate);
+
+
+        String dt = new SimpleDateFormat("yyyyMMdd").format(new Date());
+        String filePath = new File("").getAbsolutePath();
+        String logfile = filePath + "/logFiles/" + dt + "_GetCompetitivePricingForASIN_SQL.log";
+        Logger logger = LoggerMain.getLogger(logfile, false);
+
+        Connection connection = getDataEngineDBConnection(configuration);
+        setGetCompetitivePricingForASIN(logger,"report_files/GetCompetitivePricingForASIN_0.xml", connection, 101);
     }
-
 }
