@@ -27,6 +27,9 @@ public class GetReport {
             // Call the service.
             GetLowestOfferListingsForASINResponse response = client.getLowestOfferListingsForASIN(request);
 
+            String ignoreString = "xmlns=\"http://mws.amazonservices.com/schema/Products/2011-10-01\"";
+            String responseXml = (response.toXML()).replace(ignoreString, "");
+
             String selectTrackerQuery = "SELECT `CallBatchNumber` FROM `DataEngine`.`Tracker_MWSReports` " +
                                         "WHERE ReportType = '" + report + "'";
             Map<String, String> checkRun = readTracker(connection, selectTrackerQuery);
@@ -36,10 +39,8 @@ public class GetReport {
 
             String FileName = filePath + "/report_files/GetLowestOfferListingsForASIN_" + CallBatchNumber + ".xml";
             FileWriter fw = new FileWriter(FileName);
-            fw.write(response.toXML());
+            fw.write(responseXml);
             fw.close();
-
-            GetLowestOfferListingsForASINResponse response1 = new GetLowestOfferListingsForASINResponse();
 
             // Update MWSReportsCallTracker.
             updateTrackerQuery = "UPDATE `DataEngine`.`Tracker_MWSReports` SET CallBatchNumber = CallBatchNumber + 1 " +

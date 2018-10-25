@@ -1,24 +1,14 @@
 package com.apicalls.util;
 
-//import com.amazonservices.mws.products.model.GetCompetitivePricingForASINResponse;
-
-import com.apicalls.mws.model.GetCompetitivePricingForASINResponse;
-import com.apicalls.mws.model.GetCompetitivePricingForASINResult;
-import com.apicalls.mws.model.Product;
-
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.Unmarshaller;
 import java.io.*;
-//import java.sql.Statement;
 import java.sql.Connection;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.logging.Logger;
 
 import static com.apicalls.mws.GetCompetitivePricingForASIN.xmlToSql.setGetCompetitivePricingForASIN;
+import static com.apicalls.mws.GetLowestOfferListingsForASIN.xmlToSql.setGetLowestOfferListingsForASIN;
 import static com.apicalls.util.DBOperations.getDataEngineDBConnection;
-
-//import static com.apicalls.util.DBOperations.readTracker;
 
 
 public class CommonMethod {
@@ -90,5 +80,6 @@ public class CommonMethod {
 
         Connection connection = getDataEngineDBConnection(configuration);
         setGetCompetitivePricingForASIN(logger,"report_files/GetCompetitivePricingForASIN_0.xml", connection, 101);
+        setGetLowestOfferListingsForASIN(logger,"report_files/GetLowestOfferListingsForASIN_1.xml", connection, 101);
     }
 }

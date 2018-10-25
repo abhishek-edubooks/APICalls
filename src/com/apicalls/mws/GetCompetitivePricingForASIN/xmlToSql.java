@@ -12,6 +12,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.logging.Logger;
 
+import static com.apicalls.util.DBOperations.updateTracker;
+
 
 public class xmlToSql {
 
@@ -38,31 +40,49 @@ public class xmlToSql {
             GetCompetitivePricingForASINResponse result = (GetCompetitivePricingForASINResponse) um.unmarshal(new FileReader(fileName));
 
             for (GetCompetitivePricingForASINResult getCompetitivePricingForASINResult: result.getGetCompetitivePricingForASINResult()) {
-
                 String asin;
-                String newCondition = null, newSubCondition = null, usedCondition = null, usedSubCondition = null;
-                boolean newBelongsToRequester = false, usedBelongsToRequester = false;
+                String newCondition = null;
+                String newSubCondition = null;
+                String usedCondition = null;
+                String usedSubCondition = null;
+                String newListingPriceCurrencyCode = null;
+                String newShippingCurrencyCode = null;
+                String newLandedPriceCurrencyCode = null;
+                String usedListingPriceCurrencyCode = null;
+                String usedShippingCurrencyCode = null;
+                String usedLandedPriceCurrencyCode = null;
+                String salesRankProductCategoryId_0 = null;
+                String salesRankProductCategoryId_1 = null;
+                String salesRankProductCategoryId_2 = null;
+                String salesRankProductCategoryId_3 = null;
+                String salesRankProductCategoryId_4 = null;
 
-                String newListingPriceCurrencyCode = null, newShippingCurrencyCode = null, newLandedPriceCurrencyCode = null;
-                BigDecimal newListingPriceAmount = null, newShippingAmount = null, newLandedPriceAmount = null;
+                BigDecimal newListingPriceAmount = null;
+                BigDecimal newShippingAmount = null;
+                BigDecimal newLandedPriceAmount = null;
+                BigDecimal usedListingPriceAmount = null;
+                BigDecimal usedShippingAmount = null;
+                BigDecimal usedLandedPriceAmount = null;
 
-                String usedListingPriceCurrencyCode = null, usedShippingCurrencyCode = null, usedLandedPriceCurrencyCode = null;
-                BigDecimal usedListingPriceAmount = null, usedShippingAmount = null, usedLandedPriceAmount = null;
+                boolean newBelongsToRequester = false;
+                boolean usedBelongsToRequester = false;
 
-                int newOfferListingCount = 0, usedOfferListingCount = 0, anyOfferListingCount = 0, collectibleOfferListingCount = 0;
-
-                String salesRankProductCategoryId_0 = null, salesRankProductCategoryId_1 = null, salesRankProductCategoryId_2 = null,
-                        salesRankProductCategoryId_3 = null, salesRankProductCategoryId_4 = null;
-                int salesRank_0 = 0, salesRank_1 = 0, salesRank_2 = 0, salesRank_3 = 0, salesRank_4 = 0;
+                int newOfferListingCount = 0;
+                int usedOfferListingCount = 0;
+                int anyOfferListingCount = 0;
+                int collectibleOfferListingCount = 0;
+                int salesRank_0 = 0;
+                int salesRank_1 = 0;
+                int salesRank_2 = 0;
+                int salesRank_3 = 0;
+                int salesRank_4 = 0;
 
                 String responseStatus = getCompetitivePricingForASINResult.getStatus();
                 if (responseStatus.equalsIgnoreCase("Success")){
-
                     Product product = getCompetitivePricingForASINResult.getProduct();
                     asin = product.getIdentifiers().getMarketplaceASIN().getASIN();
 
                     CompetitivePricingType competitivePricingType = product.getCompetitivePricing();
-
                     for (CompetitivePriceType competitivePriceType: competitivePricingType.getCompetitivePrices().getCompetitivePrice()) {
                         if (competitivePriceType.getCondition().equalsIgnoreCase("New")){
                             newCondition = competitivePriceType.getCondition();
@@ -77,7 +97,7 @@ public class xmlToSql {
                             newLandedPriceCurrencyCode = priceType.getLandedPrice().getCurrencyCode();
                             newLandedPriceAmount = priceType.getLandedPrice().getAmount();
                         }
-                        if (competitivePriceType.getCondition().equalsIgnoreCase("Used")){
+                        else if (competitivePriceType.getCondition().equalsIgnoreCase("Used")){
                             usedCondition = competitivePriceType.getCondition();
                             usedSubCondition = competitivePriceType.getSubcondition();
                             usedBelongsToRequester = competitivePriceType.getBelongsToRequester();
@@ -95,11 +115,11 @@ public class xmlToSql {
                     for (OfferListingCountType offerListingCountType: competitivePricingType.getNumberOfOfferListings().getOfferListingCount()) {
                         if (offerListingCountType.getCondition().equalsIgnoreCase("New"))
                             newOfferListingCount = offerListingCountType.getValue();
-                        if (offerListingCountType.getCondition().equalsIgnoreCase("Used"))
+                        else if (offerListingCountType.getCondition().equalsIgnoreCase("Used"))
                             usedOfferListingCount = offerListingCountType.getValue();
-                        if (offerListingCountType.getCondition().equalsIgnoreCase("Any"))
+                        else if (offerListingCountType.getCondition().equalsIgnoreCase("Any"))
                             anyOfferListingCount = offerListingCountType.getValue();
-                        if (offerListingCountType.getCondition().equalsIgnoreCase("Collectible"))
+                        else if (offerListingCountType.getCondition().equalsIgnoreCase("Collectible"))
                             collectibleOfferListingCount = offerListingCountType.getValue();
                     }
 
@@ -109,19 +129,19 @@ public class xmlToSql {
                             salesRankProductCategoryId_0 = salesRankType.getProductCategoryId();
                             salesRank_0 = salesRankType.getRank();
                         }
-                        if (i == 1){
+                        else if (i == 1){
                             salesRankProductCategoryId_1 = salesRankType.getProductCategoryId();
                             salesRank_1 = salesRankType.getRank();
                         }
-                        if (i == 2){
+                        else if (i == 2){
                             salesRankProductCategoryId_2 = salesRankType.getProductCategoryId();
                             salesRank_2 = salesRankType.getRank();
                         }
-                        if (i == 3){
+                        else if (i == 3){
                             salesRankProductCategoryId_3 = salesRankType.getProductCategoryId();
                             salesRank_3 = salesRankType.getRank();
                         }
-                        if (i == 4){
+                        else if (i == 4){
                             salesRankProductCategoryId_4 = salesRankType.getProductCategoryId();
                             salesRank_4 = salesRankType.getRank();
                         }
@@ -139,16 +159,16 @@ public class xmlToSql {
                         stmt.setString(5, newSubCondition);
                         stmt.setBoolean(6, newBelongsToRequester);
                         stmt.setString(7, newListingPriceCurrencyCode);
-                        stmt.setBigDecimal(8,newListingPriceAmount);
+                        stmt.setBigDecimal(8, newListingPriceAmount);
                         stmt.setString(9, newShippingCurrencyCode);
                         stmt.setBigDecimal(10,newShippingAmount);
                         stmt.setString(11, newLandedPriceCurrencyCode);
-                        stmt.setBigDecimal(12,newLandedPriceAmount);
+                        stmt.setBigDecimal(12, newLandedPriceAmount);
                         stmt.setString(13, usedCondition);
                         stmt.setString(14, usedSubCondition);
                         stmt.setBoolean(15, usedBelongsToRequester);
                         stmt.setString(16, usedListingPriceCurrencyCode);
-                        stmt.setBigDecimal(17,usedListingPriceAmount);
+                        stmt.setBigDecimal(17, usedListingPriceAmount);
                         stmt.setString(18, usedShippingCurrencyCode);
                         stmt.setBigDecimal(19, usedShippingAmount);
                         stmt.setString(20, usedLandedPriceCurrencyCode);
@@ -172,13 +192,20 @@ public class xmlToSql {
                         connection.commit();
                         stmt.close();
 
+                        // Update MWSReportsCallTracker.
+                        updateTracker(connection, "UPDATE `DataEngine`.`Tracker_MWSReports` SET DataPointsCollected = DataPointsCollected + 1, " +
+                                "DataPointsQueue = TotalDataPoints - DataPointsCollected WHERE ReportType = 'GetCompetitivePricingForASIN'");
+
+                        // Update AllIsbn.
+                        updateTracker(connection, "UPDATE `DataEngine`.`AllIsbn` SET GetCompetitivePricingForASIN=true WHERE ASIN='" + asin + "'");
+
                     } catch (Exception e){
-                        logger.severe("Failed to insert data for ASIN: " + asin);
+                        logger.severe("Failed to insert data for ASIN: " + asin + " | batchId: " + batchId);
                         logger.severe("Error in insertData operation. Error message: " + e);
                     }
 
                 } else
-                    logger.severe("Status: " + responseStatus + " | ASIN: " + getCompetitivePricingForASINResult.getASIN());
+                    logger.severe("Status: " + responseStatus + " | ASIN: " + getCompetitivePricingForASINResult.getASIN() + " | batchId: " + batchId);
             }
 
         } catch (Exception e){

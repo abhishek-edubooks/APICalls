@@ -33,28 +33,13 @@ public class DBOperations {
         }
     }
 
-    public static boolean insertData(Connection connection, String insertQuery){
-        try {
-            assert connection != null;
-            Statement stmt = connection.createStatement();
-            stmt.executeUpdate(insertQuery);
-            connection.commit();
-            stmt.close();
-            return true;
-
-        } catch (Exception e){
-            logger.severe("Error in insertData operation. Error message: " + e);
-            return false;
-        }
-    }
-
     public static List<String> getASIN(Connection connection){
         try {
             assert connection != null;
             Statement stmt = connection.createStatement();
 
-            String selectQuery  = "SELECT `ASIN` FROM `DataEngine`.`IsbnAll` " +
-                                  "WHERE ASIN IS NOT NULL ORDER BY US_MWS_LastCalled ASC LIMIT 10";
+            String selectQuery  = "SELECT `ASIN` FROM `DataEngine`.`AllIsbn` " +
+                                  "WHERE ASIN IS NOT NULL ORDER BY ApiCall_LastCalled ASC LIMIT 10";
             ResultSet rs = stmt.executeQuery(selectQuery);
 
             List<String> asinList = new ArrayList<>();
