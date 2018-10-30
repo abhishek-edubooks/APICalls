@@ -1,0 +1,902 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="APICalls:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ffbfd9e5-da11-4728-813f-57b08d17bdf9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/APICalls_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APICalls.iml" beforeDir="false" afterPath="$PROJECT_DIR$/APICalls.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/apicalls/mainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/apicalls/mainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/GetReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/GetReport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/xmlToSql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/xmlToSql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/apicalls/mws/GetLowestOfferListingsForASIN/GetReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/apicalls/mws/GetLowestOfferListingsForASIN/GetReport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/apicalls/mws/GetLowestOfferListingsForASIN/xmlToSql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/apicalls/mws/GetLowestOfferListingsForASIN/xmlToSql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/apicalls/util/CommonMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/apicalls/util/CommonMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/apicalls/util/DBOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/apicalls/util/DBOperations.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1147110260">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="11" />
+          <entry key="project.open.time.13" value="2" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.17" value="2" />
+          <entry key="project.open.time.18" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.20" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="11" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="MF" value="1" />
+          <entry key="cfg" value="2" />
+          <entry key="class" value="102" />
+          <entry key="iml" value="1" />
+          <entry key="java" value="108" />
+          <entry key="json" value="2" />
+          <entry key="log" value="12" />
+          <entry key="xml" value="21" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="102" />
+          <entry key="IDEA_MODULE" value="1" />
+          <entry key="Ini" value="1" />
+          <entry key="JAVA" value="108" />
+          <entry key="JSON" value="2" />
+          <entry key="Log" value="9" />
+          <entry key="Manifest" value="1" />
+          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="XML" value="21" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="cfg" value="14" />
+          <entry key="iml" value="1" />
+          <entry key="java" value="3709" />
+          <entry key="txt" value="47" />
+          <entry key="xml" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="IDEA_MODULE" value="1" />
+          <entry key="Ini" value="2" />
+          <entry key="JAVA" value="3709" />
+          <entry key="PLAIN_TEXT" value="59" />
+          <entry key="XML" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="1315978161">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="1" />
+          <entry key="iml" value="1" />
+          <entry key="java" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="1" />
+          <entry key="IDEA_MODULE" value="1" />
+          <entry key="JAVA" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="135" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="135" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/apicalls/mainController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="243" lean-forward="true" selection-start-line="243" selection-end-line="243" />
+              <folding>
+                <element signature="method#checkThrottleSleep#0;class#mainController#0" />
+                <element signature="method#runCalls#0;class#mainController#0" />
+                <element signature="method#runSQL#0;class#mainController#0" />
+                <element signature="method#callGetCompetitivePricingForASIN#0;class#mainController#0" />
+                <element signature="method#callGetLowestOfferListingsForASIN#0;class#mainController#0" />
+                <element signature="method#sqlGetCompetitivePricingForASIN#0;class#mainController#0" />
+                <element signature="method#sqlGetLowestOfferListingsForASIN#0;class#mainController#0" />
+                <element signature="method#errorUpdate#0;class#mainController#0" />
+                <element signature="method#invalidArgumentError#0;class#mainController#0" />
+                <element signature="method#sqlConnectionError#0;class#mainController#0" />
+                <element signature="method#main#0;class#mainController#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/xmlToSql.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/apicalls/util/CommonMethod.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="82" selection-start-line="82" selection-end-line="82" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#ReadConfigFile#0;class#CommonMethod#0" />
+                <element signature="method#getConfig#0;class#CommonMethod#0" />
+                <element signature="method#checkEmergencyExit#0;class#CommonMethod#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/apicalls/util/DBOperations.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="116" selection-start-line="116" selection-end-line="116" />
+              <folding>
+                <element signature="method#getDataEngineDBConnection#0;class#DBOperations#0" />
+                <element signature="method#getASIN#0;class#DBOperations#0" />
+                <element signature="method#updateTracker#0;class#DBOperations#0" />
+                <element signature="method#readTracker#0;class#DBOperations#0" />
+                <element signature="method#updateLastCalled#0;class#DBOperations#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/GetReport.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="52" column="82" lean-forward="true" selection-start-line="52" selection-start-column="82" selection-end-line="52" selection-end-column="82" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Tracker_MWSReports</find>
+      <find>ReportType</find>
+      <find>AllOfferListingsConsidered</find>
+      <find>GetLowestOfferListingsForASINResult</find>
+      <find>ASIN=&quot;</find>
+      <find>GetLowestOfferListingsForASINResponse</find>
+      <find>rating</find>
+      <find>IsBuyBoxWinner</find>
+      <find>Tracker_APICalls</find>
+      <find>APICallName</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>Tracker_APICalls</replace>
+      <replace>APICallName</replace>
+      <replace>Tracker_MWSReports</replace>
+      <replace>ReportType</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/config/OrderReportConfig.cfg" />
+        <option value="$PROJECT_DIR$/APICalls.iml" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/mws/Subscriptions/CreateSubscription.java" />
+        <option value="$PROJECT_DIR$/src/util/xmlToSql.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/Main.java" />
+        <option value="$PROJECT_DIR$/config/Config.cfg" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/util/LoggerMain.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/ResponseMetadata.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/ResponseHeaderMetadata.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/GetCompetitivePricingForASINResponse.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/GetCompetitivePricingForASINResult.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/Product.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/IdentifierType.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/RelationshipList.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/CompetitivePricingType.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/SalesRankList.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/LowestOfferListingList.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/OffersList.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/AttributeSetList.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/CompetitivePriceList.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/NumberOfOfferListingsList.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/MoneyType.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/CompetitivePriceType.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/PriceType.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/Points.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/ASINIdentifier.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/SellerSKUIdentifier.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/LowestOfferListingType.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/QualifiersType.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/OfferListingCountType.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/OfferType.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/ShippingTimeType.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/SalesRankType.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/mws/model/OfferListingCountType.java" />
+        <option value="$PROJECT_DIR$/report_files/GetCompetitivePricingForASIN_0.xml" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/util/xmlToSql.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/mws/model/GetLowestOfferListingsForASINResult.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/mws/model/GetLowestOfferListingsForASINResponse.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/GetReport.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/mws/GetLowestOfferListingsForASIN/GetReport.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/util/DBOperations.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/mws/GetLowestOfferListingsForASIN/xmlToSql.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/xmlToSql.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/util/CommonMethod.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/mainController.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="1431" />
+    <option name="y" value="-4" />
+    <option name="width" value="1855" />
+    <option name="height" value="1084" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="APICalls_Code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="APICalls_Code" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="APICalls_Code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="APICalls_Code" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="APICalls_Code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="APICalls_Code" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="apicalls" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="APICalls_Code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="APICalls_Code" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="apicalls" type="462c0819:PsiDirectoryNode" />
+              <item name="mws" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540561554212" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.105882354" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.apicalls.mws.GetLowestOfferListingsForASIN" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/com/apicalls" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.CommonMethod">
+    <configuration name="CommonMethod" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.apicalls.util.CommonMethod" />
+      <module name="APICalls" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.apicalls.mws.GetCompetitivePricingForASIN.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.apicalls.Main" />
+      <module name="APICalls" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.CommonMethod" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CommonMethod" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ffbfd9e5-da11-4728-813f-57b08d17bdf9" name="Default Changelist" comment="" />
+      <created>1538992579740</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1538992579740</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Initial Commit">
+      <created>1540292509642</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1540292509642</updated>
+    </task>
+    <task id="LOCAL-00002" summary="GetCompetitivePricingForASIN Mapped">
+      <created>1540388289047</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1540388289047</updated>
+    </task>
+    <task id="LOCAL-00003" summary="GetLowestOfferListingsForASIN Mapped and other improvements">
+      <created>1540474143288</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1540474143288</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1431" y="-4" width="1855" height="1084" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21393035" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32985386" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3294979" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial Commit" />
+    <MESSAGE value="GetCompetitivePricingForASIN Mapped" />
+    <MESSAGE value="GetLowestOfferListingsForASIN Mapped and other improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="GetLowestOfferListingsForASIN Mapped and other improvements" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://$PROJECT_DIR$/lib/MWSProducts_2011-10-01_v2017-03-22.jar!/com/amazonservices/mws/products/model/AttributeSetList.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/MWSProducts_2011-10-01_v2017-03-22.jar!/com/amazonservices/mws/products/model/RelationshipList.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/MWSProducts_2011-10-01_v2017-03-22.jar!/com/amazonservices/mws/products/model/OfferListingCountType.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/MWSProducts_2011-10-01_v2017-03-22.jar!/com/amazonservices/mws/products/model/NumberOfOfferListingsList.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/MWSProducts_2011-10-01_v2017-03-22.jar!/com/amazonservices/mws/products/model/MoneyType.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/MWSProducts_2011-10-01_v2017-03-22.jar!/com/amazonservices/mws/products/model/CompetitivePricingType.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="38" column="19" lean-forward="true" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/MWSProducts_2011-10-01_v2017-03-22.jar!/com/amazonservices/mws/products/model/LowestOfferListingType.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/MWSProducts_2011-10-01_v2017-03-22.jar!/com/amazonservices/mws/products/model/LowestOfferListingList.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="30" column="26" lean-forward="true" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/apicalls/mws/model/OfferType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1631">
+          <caret column="54" selection-start-column="54" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/MWSProducts_2011-10-01_v2017-03-22.jar!/com/amazonservices/mws/products/model/OfferType.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="24" column="22" selection-end-line="217" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/apicalls/mws/model/OffersList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/apicalls/mws/model/ShippingTimeType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="54" selection-start-column="54" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/MWSProducts_2011-10-01_v2017-03-22.jar!/com/amazonservices/mws/products/model/ShippingTimeType.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="24" column="29" selection-end-line="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/MWSProducts_2011-10-01_v2017-03-22.jar!/com/amazonservices/mws/products/model/Product.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/apicalls/mws/model/SalesRankType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="54" selection-start-column="54" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/MWSProducts_2011-10-01_v2017-03-22.jar!/com/amazonservices/mws/products/model/SalesRankType.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="24" column="26" selection-end-line="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/apicalls/mws/model/ResponseHeaderMetadata.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/apicalls/mws/model/LowestOfferListingList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/apicalls/mws/model/RelationshipList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/apicalls/mws/model/SellerSKUIdentifier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/apicalls/mws/model/QualifiersType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/apicalls/mws/model/ResponseMetadata.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/apicalls/mws/model/GetCompetitivePricingForASINResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-682">
+          <caret line="28" column="17" lean-forward="true" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/lang/String.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="384" column="19" selection-start-line="384" selection-start-column="19" selection-end-line="384" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/apicalls/mws/model/CompetitivePriceList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="27" column="36" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/apicalls/mws/model/MoneyType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="47" column="21" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/apicalls/mws/model/CompetitivePricingType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="52" column="36" selection-start-line="52" selection-start-column="11" selection-end-line="52" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/apicalls/mws/model/NumberOfOfferListingsList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/apicalls/mws/model/OfferListingCountType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/apicalls/mws/model/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="118" column="25" selection-start-line="118" selection-start-column="25" selection-end-line="118" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/apicalls/mws/model/SalesRankList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="27" column="29" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logFiles/20181018_mws_config.log" />
+    <entry file="file://$PROJECT_DIR$/logFiles/20181024_mws_config.log" />
+    <entry file="file://$PROJECT_DIR$/report_files/GetCompetitivePricingForASIN_0.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="277" lean-forward="true" selection-start-column="277" selection-end-column="277" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/apicalls/mws/model/GetCompetitivePricingForASINResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/MWSProducts_2011-10-01_v2017-03-22.jar!/com/amazonservices/mws/products/model/GetLowestOfferListingsForASINResponse.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="31" column="30" lean-forward="true" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/MWSProducts_2011-10-01_v2017-03-22.jar!/com/amazonservices/mws/products/model/GetLowestOfferListingsForASINResult.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="25" column="48" selection-end-line="161" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/apicalls/mws/model/GetLowestOfferListingsForASINResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1485">
+          <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/apicalls/mws/model/GetLowestOfferListingsForASINResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="21" column="50" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report_files/GetLowestOfferListingsForASIN_1.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="22409" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logFiles/20181025_mws_config.log" />
+    <entry file="file://$PROJECT_DIR$/logFiles/20181026_mws_config.log" />
+    <entry file="file://$PROJECT_DIR$/src/com/apicalls/mws/GetLowestOfferListingsForASIN/GetReport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="52" column="25" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/apicalls/mws/GetLowestOfferListingsForASIN/xmlToSql.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/APICalls.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1081" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/apicalls/util/DBOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="116" selection-start-line="116" selection-end-line="116" />
+          <folding>
+            <element signature="method#getDataEngineDBConnection#0;class#DBOperations#0" />
+            <element signature="method#getASIN#0;class#DBOperations#0" />
+            <element signature="method#updateTracker#0;class#DBOperations#0" />
+            <element signature="method#readTracker#0;class#DBOperations#0" />
+            <element signature="method#updateLastCalled#0;class#DBOperations#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/GetReport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="52" column="82" lean-forward="true" selection-start-line="52" selection-start-column="82" selection-end-line="52" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/apicalls/util/CommonMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="82" selection-start-line="82" selection-end-line="82" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#ReadConfigFile#0;class#CommonMethod#0" />
+            <element signature="method#getConfig#0;class#CommonMethod#0" />
+            <element signature="method#checkEmergencyExit#0;class#CommonMethod#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/io/File.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="462" column="19" selection-start-line="462" selection-start-column="19" selection-end-line="462" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/xmlToSql.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/apicalls/mainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="243" lean-forward="true" selection-start-line="243" selection-end-line="243" />
+          <folding>
+            <element signature="method#checkThrottleSleep#0;class#mainController#0" />
+            <element signature="method#runCalls#0;class#mainController#0" />
+            <element signature="method#runSQL#0;class#mainController#0" />
+            <element signature="method#callGetCompetitivePricingForASIN#0;class#mainController#0" />
+            <element signature="method#callGetLowestOfferListingsForASIN#0;class#mainController#0" />
+            <element signature="method#sqlGetCompetitivePricingForASIN#0;class#mainController#0" />
+            <element signature="method#sqlGetLowestOfferListingsForASIN#0;class#mainController#0" />
+            <element signature="method#errorUpdate#0;class#mainController#0" />
+            <element signature="method#invalidArgumentError#0;class#mainController#0" />
+            <element signature="method#sqlConnectionError#0;class#mainController#0" />
+            <element signature="method#main#0;class#mainController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>APICalls:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.105882354" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.105882354" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.105882354" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>APICalls</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.105882354" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>commons-codec-1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.105882354" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
