@@ -124,23 +124,19 @@ public class mainController {
         try {
             TimeUnit.SECONDS.sleep(10); // Wait for file to come in.
             while (checkEmergencyExit(connection)) {
-                List<String> asinList = getASIN(connection);
-                if (asinList != null) {
 
-                    Map<String, String> checkRun = readTracker(connection, "SELECT `ProcessBatchNumber` FROM " +
-                            "`DataEngine`.`Tracker_MWSReports` WHERE ReportType='GetCompetitivePricingForASIN'");
+                Map<String, String> checkRun = readTracker(connection, "SELECT `ProcessBatchNumber` FROM " +
+                        "`DataEngine`.`Tracker_MWSReports` WHERE ReportType='GetCompetitivePricingForASIN'");
 
-                    assert checkRun != null;
-                    int ProcessBatchNumber = Integer.parseInt(checkRun.get("ProcessBatchNumber"));
-                    int batchId = Integer.parseInt(new SimpleDateFormat("YYMMddHHmm").format(new Date()));
+                assert checkRun != null;
+                int ProcessBatchNumber = Integer.parseInt(checkRun.get("ProcessBatchNumber"));
+                int batchId = Integer.parseInt(new SimpleDateFormat("YYMMddHHmm").format(new Date()));
 
-                    sqlGetCompetitivePricingForASIN(connection, batchId, ProcessBatchNumber);
-                    sqlGetLowestOfferListingsForASIN(connection, batchId, ProcessBatchNumber);
+                sqlGetCompetitivePricingForASIN(connection, batchId, ProcessBatchNumber);
+                sqlGetLowestOfferListingsForASIN(connection, batchId, ProcessBatchNumber);
 
-                    updateTracker(connection, "UPDATE `DataEngine`.`Tracker_MWSReports` SET ProcessBatchNumber=ProcessBatchNumber + 1 " +
-                            "WHERE ReportType IN ('GetCompetitivePricingForASIN', 'GetLowestOfferListingsForASIN')");
-                    updateLastCalled(connection, asinList);
-                }
+                updateTracker(connection, "UPDATE `DataEngine`.`Tracker_MWSReports` SET ProcessBatchNumber=ProcessBatchNumber + 1 " +
+                        "WHERE ReportType IN ('GetCompetitivePricingForASIN', 'GetLowestOfferListingsForASIN')");
             }
             System.out.println("IN_SUCCESS");
             logger.info("IN_SUCCESS");
@@ -175,7 +171,7 @@ public class mainController {
         File f = new File(filename);
         if(f.exists() && !f.isDirectory()) {
             setGetCompetitivePricingForASIN(connection, logger, filename, batchId);
-            if (!f.renameTo(new File("/the/new/place/newName.file")))
+            if (!f.renameTo(new File("/Web/Crons/GoogleDrive/US_MWS_GetCompetitivePricingForASIN/GetCompetitivePricingForASIN_" + ProcessBatchNumber + ".xml")))
                 logger.severe("Failed to move file.");
         }
 
@@ -187,7 +183,7 @@ public class mainController {
         File f = new File(filename);
         if(f.exists() && !f.isDirectory()) {
             setGetLowestOfferListingsForASIN(connection, logger, filename, batchId);
-            if (!f.renameTo(new File("/the/new/place/newName.file")))
+            if (!f.renameTo(new File("/Web/Crons/GoogleDrive/US_MWS_GetLowestOfferListingsForASIN/GetLowestOfferListingsForASIN_" + ProcessBatchNumber + ".xml")))
                 logger.severe("Failed to move file.");
         }
     }
