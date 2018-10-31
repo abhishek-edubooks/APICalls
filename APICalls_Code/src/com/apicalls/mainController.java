@@ -39,7 +39,7 @@ public class mainController {
 
                     // Update MWSReportsCallTracker.
                     updateTrackerQuery = "UPDATE `DataEngine`.`Tracker_MWSReports` SET CurrentHealth = 'Sleep for " + diff + " Minutes.' " +
-                            "WHERE ReportType='GetCompetitivePricingForASIN' AND ReportType='GetLowestOfferListingsForASIN'";
+                            "WHERE ReportType IN ('GetCompetitivePricingForASIN', 'GetLowestOfferListingsForASIN')";
                     updateTracker(connection, updateTrackerQuery);
 
                     TimeUnit.MINUTES.sleep(diff);
@@ -48,7 +48,7 @@ public class mainController {
                     // Update MWSReportsCallTracker.
                     updateTrackerQuery = "UPDATE `DataEngine`.`Tracker_MWSReports` SET CurrentHealth = 'ok.', " +
                             "StartTime = " + currentTimestamp + ", EndTime = " + (currentTimestamp + 3600) +
-                            " WHERE ReportType='GetCompetitivePricingForASIN' AND ReportType='GetLowestOfferListingsForASIN'";
+                            " WHERE ReportType IN ('GetCompetitivePricingForASIN', 'GetLowestOfferListingsForASIN')";
                     updateTracker(connection, updateTrackerQuery);
                 }
             } else {
@@ -72,7 +72,7 @@ public class mainController {
                     "StartTime = " + currentTimestamp + ", EndTime = " + (currentTimestamp + 3600) +
                     ", CurrentHealth = 'ok.', CurrentSignal = 'green', CmdReturn = '_RUNNING_', CallStartDate = '" +
                     new SimpleDateFormat("YYYY-MM-dd").format(new Date()) + "' WHERE " +
-                    "ReportType='GetCompetitivePricingForASIN' AND ReportType='GetLowestOfferListingsForASIN'");
+                    "ReportType IN ('GetCompetitivePricingForASIN', 'GetLowestOfferListingsForASIN')");
 
             Map<String, String> DBConfigGetCompetitivePricingForASIN = getConfig(connection, fileConfig, "GetCompetitivePricingForASIN");
             Map<String, String> DBConfigGetLowestOfferListingsForASIN = getConfig(connection, fileConfig, "GetLowestOfferListingsForASIN");
@@ -100,7 +100,7 @@ public class mainController {
                     errorUpdate(connection, msgGetLowestOfferListingsForASIN, "GetLowestOfferListingsForASIN");
 
                     updateTracker(connection, "UPDATE `DataEngine`.`Tracker_MWSReports` SET CallBatchNumber=CallBatchNumber + 1 " +
-                            "WHERE ReportType='GetCompetitivePricingForASIN' AND ReportType='GetLowestOfferListingsForASIN'");
+                            "WHERE ReportType IN ('GetCompetitivePricingForASIN', 'GetLowestOfferListingsForASIN')");
                     updateLastCalled(connection, asinList);
                 }
             }
@@ -138,7 +138,7 @@ public class mainController {
                     sqlGetLowestOfferListingsForASIN(connection, batchId, ProcessBatchNumber);
 
                     updateTracker(connection, "UPDATE `DataEngine`.`Tracker_MWSReports` SET ProcessBatchNumber=ProcessBatchNumber + 1 " +
-                            "WHERE ReportType='GetCompetitivePricingForASIN' AND ReportType='GetLowestOfferListingsForASIN'");
+                            "WHERE ReportType IN ('GetCompetitivePricingForASIN', 'GetLowestOfferListingsForASIN')");
                     updateLastCalled(connection, asinList);
                 }
             }

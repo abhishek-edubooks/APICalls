@@ -71,7 +71,7 @@ public class CommonMethod {
                 (checkGetLowestOfferListingsForASIN.get("EmergencyExit")).equalsIgnoreCase("yes")) {
 
             updateTracker(connection, "UPDATE `DataEngine`.`Tracker_MWSReports` SET EmergencyExit = 'yes', CurrentSignal = 'red' " +
-                    "WHERE ReportType = 'GetCompetitivePricingForASIN' AND ReportType = 'GetLowestOfferListingsForASIN'");
+                    "WHERE ReportType IN ('GetCompetitivePricingForASIN', 'GetLowestOfferListingsForASIN')");
             return false;
         }
         return true;
