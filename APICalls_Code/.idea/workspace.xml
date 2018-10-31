@@ -6,18 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ffbfd9e5-da11-4728-813f-57b08d17bdf9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/APICalls_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APICalls.iml" beforeDir="false" afterPath="$PROJECT_DIR$/APICalls.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/apicalls/mainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/apicalls/mainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/GetReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/GetReport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/xmlToSql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/xmlToSql.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/apicalls/mws/GetLowestOfferListingsForASIN/GetReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/apicalls/mws/GetLowestOfferListingsForASIN/GetReport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/apicalls/mws/GetLowestOfferListingsForASIN/xmlToSql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/apicalls/mws/GetLowestOfferListingsForASIN/xmlToSql.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/apicalls/util/CommonMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/apicalls/util/CommonMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/apicalls/util/DBOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/apicalls/util/DBOperations.java" afterDir="false" />
-    </list>
+    <list default="true" id="ffbfd9e5-da11-4728-813f-57b08d17bdf9" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -89,6 +78,7 @@
     <session id="1315978161">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -222,7 +212,7 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -275,7 +265,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1431" />
     <option name="y" value="-4" />
     <option name="width" value="1855" />
@@ -420,8 +410,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1431" y="-4" width="1855" height="1084" extended-state="7" />
-    <editor active="true" />
+    <frame x="1431" y="-4" width="1855" height="1084" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21393035" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
