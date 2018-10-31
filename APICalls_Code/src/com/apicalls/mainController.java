@@ -125,23 +125,27 @@ public class mainController {
             TimeUnit.SECONDS.sleep(10); // Wait for file to come in.
             while (checkEmergencyExit(connection)) {
 
-                Map<String, String> checkRun = readTracker(connection, "SELECT `ProcessBatchNumber` FROM " +
+                Map<String, String> checkRun = readTracker(connection, "SELECT `ProcessBatchNumber`, `CallBatchNumber` FROM " +
                         "`DataEngine`.`Tracker_MWSReports` WHERE ReportType='GetCompetitivePricingForASIN'");
 
                 assert checkRun != null;
                 int ProcessBatchNumber = Integer.parseInt(checkRun.get("ProcessBatchNumber"));
+                int CallBatchNumber = Integer.parseInt(checkRun.get("CallBatchNumber"));
                 int batchId = Integer.parseInt(new SimpleDateFormat("YYMMddHHmm").format(new Date()));
 
-                sqlGetCompetitivePricingForASIN(connection, batchId, ProcessBatchNumber);
-                sqlGetLowestOfferListingsForASIN(connection, batchId, ProcessBatchNumber);
+                if (CallBatchNumber > ProcessBatchNumber) {
+                    sqlGetCompetitivePricingForASIN(connection, batchId, ProcessBatchNumber);
+                    sqlGetLowestOfferListingsForASIN(connection, batchId, ProcessBatchNumber);
 
-                updateTracker(connection, "UPDATE `DataEngine`.`Tracker_MWSReports` SET ProcessBatchNumber=ProcessBatchNumber + 1 " +
-                        "WHERE ReportType IN ('GetCompetitivePricingForASIN', 'GetLowestOfferListingsForASIN')");
+                    updateTracker(connection, "UPDATE `DataEngine`.`Tracker_MWSReports` SET ProcessBatchNumber=ProcessBatchNumber + 1 " +
+                            "WHERE ReportType IN ('GetCompetitivePricingForASIN', 'GetLowestOfferListingsForASIN')");
+                }
             }
             System.out.println("IN_SUCCESS");
             logger.info("IN_SUCCESS");
 
         } catch (Exception e) {
+            e.printStackTrace();
             logger.severe("Failed. Error Message: " + e);
             logger.severe("IN_FAILED");
         }
