@@ -59,6 +59,7 @@ public class mainController {
     }
 
     private static void runCalls() {
+        System.out.println("runCalls");
         long currentTimestamp = System.currentTimeMillis() / 1000;
 
         Map<String, String> fileConfig = ReadConfigFile();
@@ -112,6 +113,7 @@ public class mainController {
     }
 
     private static void runSQL() {
+        System.out.println("runSQL");
         Map<String, String> fileConfig = ReadConfigFile();
         Connection connection = getDataEngineDBConnection(fileConfig);
         if (connection == null)
