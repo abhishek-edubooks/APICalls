@@ -70,8 +70,9 @@ public class mainController {
         try {
             updateTracker(connection, "UPDATE `DataEngine`.`Tracker_MWSReports` SET EmergencyExit='no', " +
                     "StartTime = " + currentTimestamp + ", EndTime = " + (currentTimestamp + 3600) +
-                    ", CurrentHealth = 'ok.', CurrentSignal = 'green', CmdReturn = '_RUNNING_' " +
-                    "WHERE ReportType='GetCompetitivePricingForASIN' AND ReportType='GetLowestOfferListingsForASIN'");
+                    ", CurrentHealth = 'ok.', CurrentSignal = 'green', CmdReturn = '_RUNNING_', CallStartDate = '" +
+                    new SimpleDateFormat("YYYY-MM-dd").format(new Date()) + "' WHERE " +
+                    "ReportType='GetCompetitivePricingForASIN' AND ReportType='GetLowestOfferListingsForASIN'");
 
             Map<String, String> DBConfigGetCompetitivePricingForASIN = getConfig(connection, fileConfig, "GetCompetitivePricingForASIN");
             Map<String, String> DBConfigGetLowestOfferListingsForASIN = getConfig(connection, fileConfig, "GetLowestOfferListingsForASIN");
@@ -108,6 +109,7 @@ public class mainController {
 
         } catch (Exception e) {
             logger.severe("Failed. Error Message: " + e);
+            e.printStackTrace();
             logger.severe("IN_FAILED");
         }
     }

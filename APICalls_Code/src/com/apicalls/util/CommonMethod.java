@@ -47,7 +47,7 @@ public class CommonMethod {
 
     public static Map<String, String> getConfig(Connection connection, Map<String, String> fileConfig, String report) {
         Map<String, String> DBConfiguration = readTracker(connection,
-                "SELECT MWSAccessKey, MWSSecretKey, SellerId, MarketplaceId " +
+                "SELECT MWSAccessKey, MWSSecretKey, SellerId, MarketplaceId, MWSServiceURL " +
                         "FROM `DataEngine`.`Tracker_MWSReports` WHERE ReportType = '" + report + "'");
         assert DBConfiguration != null;
         DBConfiguration.putAll(fileConfig);
