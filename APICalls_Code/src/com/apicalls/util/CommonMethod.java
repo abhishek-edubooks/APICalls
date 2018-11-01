@@ -70,8 +70,8 @@ public class CommonMethod {
         if ((checkGetCompetitivePricingForASIN.get("EmergencyExit")).equalsIgnoreCase("yes") ||
                 (checkGetLowestOfferListingsForASIN.get("EmergencyExit")).equalsIgnoreCase("yes")) {
 
-            updateTracker(connection, "UPDATE `DataEngine`.`Tracker_MWSReports` SET EmergencyExit = 'yes', CurrentSignal = 'red' " +
-                    "WHERE ReportType IN ('GetCompetitivePricingForASIN', 'GetLowestOfferListingsForASIN')");
+            updateTracker(connection, "UPDATE `DataEngine`.`Tracker_MWSReports` SET EmergencyExit = 'yes', CurrentSignal = 'red', " +
+                    "CmdReturn = 'IN_SUCCESS' WHERE ReportType IN ('GetCompetitivePricingForASIN', 'GetLowestOfferListingsForASIN')");
             return false;
         }
         return true;

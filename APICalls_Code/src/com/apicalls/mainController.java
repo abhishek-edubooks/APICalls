@@ -173,11 +173,12 @@ public class mainController {
         String filename = filePath + "/report_files/GetCompetitivePricingForASIN_" + ProcessBatchNumber + ".xml";
 
         File f = new File(filename);
-        if(f.exists() && !f.isDirectory()) {
+        if(f.exists() && f.length() > 0) {
             setGetCompetitivePricingForASIN(connection, logger, filename, batchId);
             if (!f.renameTo(new File("/Web/Crons/GoogleDrive/US_MWS_GetCompetitivePricingForASIN/GetCompetitivePricingForASIN_" + ProcessBatchNumber + ".xml")))
                 logger.severe("Failed to move file.");
-        }
+        } else
+            logger.severe("File doesn't exist or File is empty: " + filename);
 
     }
 
@@ -185,11 +186,12 @@ public class mainController {
         String filename = filePath + "/report_files/GetLowestOfferListingsForASIN_" + ProcessBatchNumber + ".xml";
 
         File f = new File(filename);
-        if(f.exists() && !f.isDirectory()) {
+        if(f.exists() && f.length() > 0) {
             setGetLowestOfferListingsForASIN(connection, logger, filename, batchId);
             if (!f.renameTo(new File("/Web/Crons/GoogleDrive/US_MWS_GetLowestOfferListingsForASIN/GetLowestOfferListingsForASIN_" + ProcessBatchNumber + ".xml")))
                 logger.severe("Failed to move file.");
-        }
+        } else
+            logger.severe("File doesn't exist or File is empty: " + filename);
     }
 
     private static void errorUpdate(Connection connection, String errorMessage, String report) {
