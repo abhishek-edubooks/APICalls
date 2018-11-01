@@ -94,7 +94,7 @@ public class mainController {
 
                     String msgGetCompetitivePricingForASIN = callGetCompetitivePricingForASIN(DBConfigGetCompetitivePricingForASIN, asinList, callBatchNumber);
                     String msgGetLowestOfferListingsForASIN = callGetLowestOfferListingsForASIN(DBConfigGetLowestOfferListingsForASIN, asinList, callBatchNumber);
-                    requestCount++;
+                    requestCount += 10;
 
                     errorUpdate(connection, msgGetCompetitivePricingForASIN, "GetCompetitivePricingForASIN");
                     errorUpdate(connection, msgGetLowestOfferListingsForASIN, "GetLowestOfferListingsForASIN");

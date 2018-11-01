@@ -108,26 +108,25 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="354" />
+          <entry key="java" value="361" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="354" />
+          <entry key="JAVA" value="361" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/apicalls/mainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="133" lean-forward="true" selection-start-line="133" selection-end-line="133" />
+            <state relative-caret-position="645">
+              <caret line="96" column="38" selection-start-line="96" selection-start-column="38" selection-end-line="96" selection-end-column="38" />
               <folding>
                 <element signature="method#checkThrottleSleep#0;class#mainController#0" />
-                <element signature="method#runCalls#0;class#mainController#0" />
                 <element signature="method#callGetCompetitivePricingForASIN#0;class#mainController#0" />
                 <element signature="method#callGetLowestOfferListingsForASIN#0;class#mainController#0" />
                 <element signature="method#sqlGetCompetitivePricingForASIN#0;class#mainController#0" />
@@ -144,7 +143,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/apicalls/util/CommonMethod.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="754">
-              <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+              <caret line="78" selection-start-line="78" selection-end-line="78" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -152,10 +151,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/apicalls/util/DBOperations.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
+            <state relative-caret-position="34">
               <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
             </state>
           </provider>
@@ -322,7 +321,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541058571238" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541060043977" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -728,13 +727,6 @@
     <entry file="file://$PROJECT_DIR$/APICalls.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/apicalls/util/DBOperations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/apicalls/mws/GetLowestOfferListingsForASIN/xmlToSql.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="634">
@@ -755,7 +747,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/apicalls/util/CommonMethod.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="754">
-          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -764,11 +756,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/apicalls/mainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="133" lean-forward="true" selection-start-line="133" selection-end-line="133" />
+        <state relative-caret-position="645">
+          <caret line="96" column="38" selection-start-line="96" selection-start-column="38" selection-end-line="96" selection-end-column="38" />
           <folding>
             <element signature="method#checkThrottleSleep#0;class#mainController#0" />
-            <element signature="method#runCalls#0;class#mainController#0" />
             <element signature="method#callGetCompetitivePricingForASIN#0;class#mainController#0" />
             <element signature="method#callGetLowestOfferListingsForASIN#0;class#mainController#0" />
             <element signature="method#sqlGetCompetitivePricingForASIN#0;class#mainController#0" />
@@ -777,6 +768,13 @@
             <element signature="method#invalidArgumentError#0;class#mainController#0" />
             <element signature="method#sqlConnectionError#0;class#mainController#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/apicalls/util/DBOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
         </state>
       </provider>
     </entry>
