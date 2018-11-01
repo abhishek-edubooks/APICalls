@@ -139,7 +139,8 @@ public class mainController {
                     updateTracker(connection, "UPDATE `DataEngine`.`Tracker_MWSReports` SET ProcessBatchNumber=ProcessBatchNumber + 1 " +
                             "WHERE ReportType IN ('GetCompetitivePricingForASIN', 'GetLowestOfferListingsForASIN')");
                 } else {
-                    TimeUnit.SECONDS.sleep(10); // Wait for file to come in.
+                    updateTracker(connection, "UPDATE `DataEngine`.`Tracker_MWSReports` SET ProcessBatchNumber=ProcessBatchNumber " +
+                            "WHERE ReportType IN ('GetCompetitivePricingForASIN', 'GetLowestOfferListingsForASIN')");
                 }
             }
             System.out.println("IN_SUCCESS");
