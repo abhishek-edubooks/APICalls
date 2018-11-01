@@ -12,6 +12,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
 
@@ -41,6 +42,9 @@ public class GetReport {
             logger.severe("StatusCode: "+ex.getStatusCode());
             logger.severe("ErrorCode: "+ex.getErrorCode());
             logger.severe("ErrorType: "+ex.getErrorType());
+
+            try { TimeUnit.SECONDS.sleep(2); }
+            catch (Exception e){ logger.severe("Sleep error: " + e); }
 
             errorMessage = "Failed. " + ex.getErrorCode() + " : " + ex.getMessage();
         } catch (IOException e) {

@@ -91,7 +91,7 @@
           <entry key="cfg" value="1" />
           <entry key="class" value="1" />
           <entry key="iml" value="2" />
-          <entry key="java" value="10" />
+          <entry key="java" value="12" />
           <entry key="log" value="9" />
           <entry key="xml" value="10" />
         </counts>
@@ -101,30 +101,30 @@
           <entry key="CLASS" value="1" />
           <entry key="IDEA_MODULE" value="2" />
           <entry key="Ini" value="1" />
-          <entry key="JAVA" value="10" />
+          <entry key="JAVA" value="12" />
           <entry key="Log" value="9" />
           <entry key="XML" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="361" />
+          <entry key="java" value="411" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="361" />
+          <entry key="JAVA" value="411" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/apicalls/mainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="96" column="38" selection-start-line="96" selection-start-column="38" selection-end-line="96" selection-end-column="38" />
+            <state relative-caret-position="-986">
+              <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
               <folding>
                 <element signature="method#checkThrottleSleep#0;class#mainController#0" />
                 <element signature="method#callGetCompetitivePricingForASIN#0;class#mainController#0" />
@@ -151,10 +151,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/apicalls/util/DBOperations.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
+            <state relative-caret-position="105">
               <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
             </state>
           </provider>
@@ -234,13 +234,13 @@
         <option value="$PROJECT_DIR$/src/com/apicalls/util/xmlToSql.java" />
         <option value="$PROJECT_DIR$/src/com/apicalls/mws/model/GetLowestOfferListingsForASINResult.java" />
         <option value="$PROJECT_DIR$/src/com/apicalls/mws/model/GetLowestOfferListingsForASINResponse.java" />
-        <option value="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/GetReport.java" />
         <option value="$PROJECT_DIR$/src/com/apicalls/util/DBOperations.java" />
-        <option value="$PROJECT_DIR$/src/com/apicalls/mws/GetLowestOfferListingsForASIN/GetReport.java" />
         <option value="$PROJECT_DIR$/src/com/apicalls/util/CommonMethod.java" />
         <option value="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/xmlToSql.java" />
         <option value="$PROJECT_DIR$/src/com/apicalls/mws/GetLowestOfferListingsForASIN/xmlToSql.java" />
         <option value="$PROJECT_DIR$/src/com/apicalls/mainController.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/GetReport.java" />
+        <option value="$PROJECT_DIR$/src/com/apicalls/mws/GetLowestOfferListingsForASIN/GetReport.java" />
       </list>
     </option>
   </component>
@@ -321,7 +321,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541060043977" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541064337883" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -437,7 +437,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1430" y="-11" width="1857" height="1092" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22111663" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -701,20 +700,6 @@
     <entry file="file://$PROJECT_DIR$/report_files/GetLowestOfferListingsForASIN_1.xml" />
     <entry file="file://$PROJECT_DIR$/report_files/GetCompetitivePricingForASIN_0.xml" />
     <entry file="file://$PROJECT_DIR$/report_files/GetLowestOfferListingsForASIN_0.xml" />
-    <entry file="file://$PROJECT_DIR$/src/com/apicalls/mws/GetLowestOfferListingsForASIN/GetReport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/GetReport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="58" column="61" selection-start-line="58" selection-start-column="48" selection-end-line="58" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/report_files/GetCompetitivePricingForASIN_1.xml" />
     <entry file="file://$PROJECT_DIR$/report_files/GetCompetitivePricingForASIN_3.xml" />
     <entry file="file://$PROJECT_DIR$/report_files/GetCompetitivePricingForASIN_38.xml">
@@ -754,10 +739,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/apicalls/util/DBOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/apicalls/mws/GetCompetitivePricingForASIN/GetReport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="46" column="70" lean-forward="true" selection-start-line="46" selection-start-column="70" selection-end-line="46" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/apicalls/mws/GetLowestOfferListingsForASIN/GetReport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="46" column="70" selection-start-line="46" selection-start-column="70" selection-end-line="46" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/apicalls/mainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="96" column="38" selection-start-line="96" selection-start-column="38" selection-end-line="96" selection-end-column="38" />
+        <state relative-caret-position="-986">
+          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
           <folding>
             <element signature="method#checkThrottleSleep#0;class#mainController#0" />
             <element signature="method#callGetCompetitivePricingForASIN#0;class#mainController#0" />
@@ -768,13 +774,6 @@
             <element signature="method#invalidArgumentError#0;class#mainController#0" />
             <element signature="method#sqlConnectionError#0;class#mainController#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/apicalls/util/DBOperations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
         </state>
       </provider>
     </entry>
