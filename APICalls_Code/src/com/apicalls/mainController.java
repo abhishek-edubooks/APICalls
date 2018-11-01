@@ -2,6 +2,7 @@ package com.apicalls;
 
 import java.io.File;
 import java.sql.Connection;
+import java.sql.Time;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -139,7 +140,8 @@ public class mainController {
 
                     updateTracker(connection, "UPDATE `DataEngine`.`Tracker_MWSReports` SET ProcessBatchNumber=ProcessBatchNumber + 1 " +
                             "WHERE ReportType IN ('GetCompetitivePricingForASIN', 'GetLowestOfferListingsForASIN')");
-                }
+                } else
+                    TimeUnit.SECONDS.sleep(2); // Wait for file to come in.
             }
             System.out.println("IN_SUCCESS");
             logger.info("IN_SUCCESS");
