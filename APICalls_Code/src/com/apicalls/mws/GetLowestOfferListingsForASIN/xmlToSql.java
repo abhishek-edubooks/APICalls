@@ -171,8 +171,8 @@ public class xmlToSql {
                     }
 
                     // Update MWSReportsCallTracker.
-                    updateTracker(connection, "UPDATE `DataEngine`.`Tracker_MWSReports` SET DataPointsCollected=DataPointsCollected + 1, " +
-                            "DataPointsQueue=TotalDataPoints - DataPointsCollected WHERE ReportType= 'GetLowestOfferListingsForASIN'");
+                    updateTracker(connection, "UPDATE `DataEngine`.`Tracker_MWSReports` SET DataPointsCollected=DataPointsCollected + 1" +
+                            " WHERE ReportType= 'GetLowestOfferListingsForASIN'");
 
                     // Update AllIsbn.
                     updateTracker(connection, "UPDATE `DataEngine`.`AllIsbn` SET GetLowestOfferListingsForASIN = true," +
@@ -182,9 +182,11 @@ public class xmlToSql {
                     String asinMain = getLowestOfferListingsForASINResult.getASIN();
                     logger.severe("Status: " + responseStatus + " | ASIN: " + asinMain + " | batchId: " + batchId);
 
-                    // Update AllIsbn.
-                    updateTracker(connection, "UPDATE `DataEngine`.`AllIsbn` SET GetLowestOfferListingsForASIN = false," +
-                            " trials_GetLowestOfferListingsForASIN = trials_GetLowestOfferListingsForASIN + 1 WHERE ASIN='" + asinMain + "'");
+                    if (asinMain != null) {
+                        // Update AllIsbn.
+                        updateTracker(connection, "UPDATE `DataEngine`.`AllIsbn` SET GetLowestOfferListingsForASIN = false," +
+                                " trials_GetLowestOfferListingsForASIN = trials_GetLowestOfferListingsForASIN + 1 WHERE ASIN='" + asinMain + "'");
+                    }
                 }
             }
 

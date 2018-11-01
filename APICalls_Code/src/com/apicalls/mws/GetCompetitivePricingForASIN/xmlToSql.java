@@ -193,8 +193,8 @@ public class xmlToSql {
                         stmt.close();
 
                         // Update MWSReportsCallTracker.
-                        updateTracker(connection, "UPDATE `DataEngine`.`Tracker_MWSReports` SET DataPointsCollected = DataPointsCollected + 1, " +
-                                "DataPointsQueue = TotalDataPoints - DataPointsCollected WHERE ReportType = 'GetCompetitivePricingForASIN'");
+                        updateTracker(connection, "UPDATE `DataEngine`.`Tracker_MWSReports` SET DataPointsCollected = DataPointsCollected + 1 " +
+                                "WHERE ReportType = 'GetCompetitivePricingForASIN'");
 
                         // Update AllIsbn.
                         updateTracker(connection, "UPDATE `DataEngine`.`AllIsbn` SET GetCompetitivePricingForASIN = true," +
@@ -209,9 +209,11 @@ public class xmlToSql {
                     String asinMain = getCompetitivePricingForASINResult.getASIN();
                     logger.severe("Status: " + responseStatus + " | ASIN: " + asinMain + " | batchId: " + batchId);
 
-                    // Update AllIsbn.
-                    updateTracker(connection, "UPDATE `DataEngine`.`AllIsbn` SET GetCompetitivePricingForASIN = false," +
-                            " trials_GetCompetitivePricingForASIN = trials_GetCompetitivePricingForASIN + 1 WHERE ASIN='" + asinMain + "'");
+                    if (asinMain != null) {
+                        // Update AllIsbn.
+                        updateTracker(connection, "UPDATE `DataEngine`.`AllIsbn` SET GetCompetitivePricingForASIN = false," +
+                                " trials_GetCompetitivePricingForASIN = trials_GetCompetitivePricingForASIN + 1 WHERE ASIN='" + asinMain + "'");
+                    }
                 }
             }
 
