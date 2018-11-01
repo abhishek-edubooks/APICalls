@@ -83,19 +83,21 @@ public class mainController {
                     if (requestCount >= 36000)
                         requestCount = 0;
 
-                    Map<String, String> checkRun = readTracker(connection, "SELECT `CallBatchNumber` FROM " +
+                    Map<String, String> checkRun = readTracker(connection, "SELECT `CallBatchNumber`, `EndTime` FROM " +
                             "`DataEngine`.`Tracker_MWSReports` WHERE ReportType='GetCompetitivePricingForASIN'");
 
                     assert checkRun != null;
+                    if ((System.currentTimeMillis() / 1000) >= Long.parseLong(checkRun.get("EndTime"))) {
+                        requestCount = 0;
+                        updateTracker(connection, "UPDATE `DataEngine`.`Tracker_MWSReports` SET " +
+                                "StartTime = " + currentTimestamp + ", EndTime = " + (currentTimestamp + 3600) +
+                                " WHERE ReportType IN ('GetCompetitivePricingForASIN', 'GetLowestOfferListingsForASIN')");
+                    }
+
                     int callBatchNumber = Integer.parseInt(checkRun.get("CallBatchNumber"));
 
-                    long startTimestamp = System.currentTimeMillis();
                     String msgGetCompetitivePricingForASIN = callGetCompetitivePricingForASIN(DBConfigGetCompetitivePricingForASIN, asinList, callBatchNumber);
                     String msgGetLowestOfferListingsForASIN = callGetLowestOfferListingsForASIN(DBConfigGetLowestOfferListingsForASIN, asinList, callBatchNumber);
-                    long diffTimestamp = System.currentTimeMillis() - startTimestamp;
-
-                    if (diffTimestamp < 1000)
-                        TimeUnit.MILLISECONDS.sleep(diffTimestamp);
                     requestCount += 10;
 
                     errorUpdate(connection, msgGetCompetitivePricingForASIN, "GetCompetitivePricingForASIN");
