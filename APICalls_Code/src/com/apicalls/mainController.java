@@ -130,17 +130,17 @@ public class mainController {
 
                 assert checkRun != null;
                 int ProcessBatchNumber = Integer.parseInt(checkRun.get("ProcessBatchNumber"));
-                int CallBatchNumber = Integer.parseInt(checkRun.get("CallBatchNumber"));
                 int batchId = Integer.parseInt(new SimpleDateFormat("YYMMddHHmm").format(new Date()));
 
-                if (CallBatchNumber > ProcessBatchNumber) {
+                if (Integer.parseInt(checkRun.get("CallBatchNumber")) > ProcessBatchNumber) {
                     sqlGetCompetitivePricingForASIN(connection, batchId, ProcessBatchNumber);
                     sqlGetLowestOfferListingsForASIN(connection, batchId, ProcessBatchNumber);
 
                     updateTracker(connection, "UPDATE `DataEngine`.`Tracker_MWSReports` SET ProcessBatchNumber=ProcessBatchNumber + 1 " +
                             "WHERE ReportType IN ('GetCompetitivePricingForASIN', 'GetLowestOfferListingsForASIN')");
-                } else
+                } else {
                     TimeUnit.SECONDS.sleep(10); // Wait for file to come in.
+                }
             }
             System.out.println("IN_SUCCESS");
             logger.info("IN_SUCCESS");
