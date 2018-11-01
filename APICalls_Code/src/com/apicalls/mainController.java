@@ -24,7 +24,6 @@ public class mainController {
 
     private static void checkThrottleSleep(Connection connection, int requestCount) throws InterruptedException {
         long currentTimestamp = System.currentTimeMillis() / 1000;
-        String updateTrackerQuery;
         if (requestCount >= 36000){
 
             Map<String, String> Times = readTracker(connection, "SELECT EndTime FROM `DataEngine`.`Tracker_MWSReports` " +
@@ -38,18 +37,16 @@ public class mainController {
                     logger.info("Going for Sleep for " + diff + " Minutes.");
 
                     // Update MWSReportsCallTracker.
-                    updateTrackerQuery = "UPDATE `DataEngine`.`Tracker_MWSReports` SET CurrentHealth = 'Sleep for " + diff + " Minutes.' " +
-                            "WHERE ReportType IN ('GetCompetitivePricingForASIN', 'GetLowestOfferListingsForASIN')";
-                    updateTracker(connection, updateTrackerQuery);
+                    updateTracker(connection, "UPDATE `DataEngine`.`Tracker_MWSReports` SET CurrentHealth = 'Sleep for " + diff + " Minutes.' " +
+                            "WHERE ReportType IN ('GetCompetitivePricingForASIN', 'GetLowestOfferListingsForASIN')");
 
                     TimeUnit.MINUTES.sleep(diff);
                     currentTimestamp = System.currentTimeMillis() / 1000;
 
                     // Update MWSReportsCallTracker.
-                    updateTrackerQuery = "UPDATE `DataEngine`.`Tracker_MWSReports` SET CurrentHealth = 'ok.', " +
+                    updateTracker(connection, "UPDATE `DataEngine`.`Tracker_MWSReports` SET CurrentHealth = 'ok.', " +
                             "StartTime = " + currentTimestamp + ", EndTime = " + (currentTimestamp + 3600) +
-                            " WHERE ReportType IN ('GetCompetitivePricingForASIN', 'GetLowestOfferListingsForASIN')";
-                    updateTracker(connection, updateTrackerQuery);
+                            " WHERE ReportType IN ('GetCompetitivePricingForASIN', 'GetLowestOfferListingsForASIN')");
                 }
             } else {
                 logger.info("Going for Sleep for 60 Minutes.");
@@ -92,15 +89,20 @@ public class mainController {
                     assert checkRun != null;
                     int callBatchNumber = Integer.parseInt(checkRun.get("CallBatchNumber"));
 
+                    long startTimestamp = System.currentTimeMillis();
                     String msgGetCompetitivePricingForASIN = callGetCompetitivePricingForASIN(DBConfigGetCompetitivePricingForASIN, asinList, callBatchNumber);
                     String msgGetLowestOfferListingsForASIN = callGetLowestOfferListingsForASIN(DBConfigGetLowestOfferListingsForASIN, asinList, callBatchNumber);
+                    long diffTimestamp = System.currentTimeMillis() - startTimestamp;
+
+                    if (diffTimestamp < 1000)
+                        TimeUnit.MILLISECONDS.sleep(diffTimestamp);
                     requestCount += 10;
 
                     errorUpdate(connection, msgGetCompetitivePricingForASIN, "GetCompetitivePricingForASIN");
                     errorUpdate(connection, msgGetLowestOfferListingsForASIN, "GetLowestOfferListingsForASIN");
 
-                    updateTracker(connection, "UPDATE `DataEngine`.`Tracker_MWSReports` SET CallBatchNumber=CallBatchNumber + 1 " +
-                            "WHERE ReportType IN ('GetCompetitivePricingForASIN', 'GetLowestOfferListingsForASIN')");
+                    updateTracker(connection, "UPDATE `DataEngine`.`Tracker_MWSReports` SET CallBatchNumber=CallBatchNumber + 1, " +
+                            "DataPointsRequested= " + requestCount + "WHERE ReportType IN ('GetCompetitivePricingForASIN', 'GetLowestOfferListingsForASIN')");
                     updateLastCalled(connection, asinList);
                 }
             }
