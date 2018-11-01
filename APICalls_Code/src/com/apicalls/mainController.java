@@ -102,7 +102,7 @@ public class mainController {
                     errorUpdate(connection, msgGetLowestOfferListingsForASIN, "GetLowestOfferListingsForASIN");
 
                     updateTracker(connection, "UPDATE `DataEngine`.`Tracker_MWSReports` SET CallBatchNumber=CallBatchNumber + 1, " +
-                            "DataPointsRequested= " + requestCount + "WHERE ReportType IN ('GetCompetitivePricingForASIN', 'GetLowestOfferListingsForASIN')");
+                            "DataPointsRequested= " + requestCount + " WHERE ReportType IN ('GetCompetitivePricingForASIN', 'GetLowestOfferListingsForASIN')");
                     updateLastCalled(connection, asinList);
                 }
             }
@@ -177,12 +177,13 @@ public class mainController {
         String filename = filePath + "/report_files/GetCompetitivePricingForASIN_" + ProcessBatchNumber + ".xml";
 
         File f = new File(filename);
-        if(f.exists() && f.length() > 0) {
+        if(f.exists() && f.length() > 0)
             setGetCompetitivePricingForASIN(connection, logger, filename, batchId);
-            if (!f.renameTo(new File("/Web/Crons/GoogleDrive/US_MWS_GetCompetitivePricingForASIN/GetCompetitivePricingForASIN_" + ProcessBatchNumber + ".xml")))
-                logger.severe("Failed to move file.");
-        } else
+        else
             logger.severe("File doesn't exist or File is empty: " + filename);
+
+        if (!f.renameTo(new File("/Web/Crons/GoogleDrive/US_MWS_GetCompetitivePricingForASIN/GetCompetitivePricingForASIN_" + ProcessBatchNumber + ".xml")))
+            logger.severe("Failed to move file.");
 
     }
 
@@ -190,12 +191,13 @@ public class mainController {
         String filename = filePath + "/report_files/GetLowestOfferListingsForASIN_" + ProcessBatchNumber + ".xml";
 
         File f = new File(filename);
-        if(f.exists() && f.length() > 0) {
+        if(f.exists() && f.length() > 0)
             setGetLowestOfferListingsForASIN(connection, logger, filename, batchId);
-            if (!f.renameTo(new File("/Web/Crons/GoogleDrive/US_MWS_GetLowestOfferListingsForASIN/GetLowestOfferListingsForASIN_" + ProcessBatchNumber + ".xml")))
-                logger.severe("Failed to move file.");
-        } else
+        else
             logger.severe("File doesn't exist or File is empty: " + filename);
+
+        if (!f.renameTo(new File("/Web/Crons/GoogleDrive/US_MWS_GetLowestOfferListingsForASIN/GetLowestOfferListingsForASIN_" + ProcessBatchNumber + ".xml")))
+            logger.severe("Failed to move file.");
     }
 
     private static void errorUpdate(Connection connection, String errorMessage, String report) {
